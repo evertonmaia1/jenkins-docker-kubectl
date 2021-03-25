@@ -47,6 +47,10 @@ metadata:
   labels:
     app: registry
 spec:
+  selector:
+    matchLabels:
+      app: registry
+      tier: registry
   ports:
     - port: 8080
       targetPort: 8080
@@ -64,6 +68,10 @@ metadata:
   labels:
     app: registry
 spec:
+  selector:
+    matchLabels:
+      app: registry
+      tier: registry
   strategy:
     type: Recreate
   template:
