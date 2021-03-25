@@ -59,6 +59,10 @@ metadata:
   labels:
     app: jenkins
 spec:
+  selector:
+    matchLabels:
+      app: jenkins
+      tier: jenkins
   strategy:
     type: Recreate
   template:
